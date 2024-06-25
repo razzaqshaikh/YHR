@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+      function validate()
+      {
+          var x=document.forms[0].elements[0].value;
+          if(x==null||x=="")
+          {
+              document.getElementById("a").innerHTML="<font color=red>Fill Firstname";
+              return false;
+          }
+          var y=document.forms[0].elements[1].value;
+          if(y==null||y=="")
+          {
+              document.getElementById("b").innerHTML="<font color=red>Fill Middlename";
+              return false;
+          }
+          var z=document.forms[0].elements[2].value;
+          if(z==null||z=="")
+          {
+              document.getElementById("c").innerHTML="<font color=red>Fill Lastname";
+              return false;
+          }
+          var p=document.forms[0].elements[3].value;
+          if(p==null||p=="")
+          {
+              document.getElementById("d").innerHTML="<font color=red>Fill Username";
+              return false;
+          }
+          var q=document.forms[0].elements[4].value;
+          if(q==null||q=="")
+          {
+              document.getElementById("e").innerHTML="<font color=red>Fill Password";
+              return false;
+          }
+          var r=document.forms[0].elements[5].value;
+          if(r==null||r=="")
+          {
+              document.getElementById("f").innerHTML="<font color=red>Fill Confirm Password";
+              return false;
+          }
+          if(q!=r)
+          {
+              document.getElementById("f").innerHTML="<font color=red> Password Mismatch";
+              return false;
+          }
+          if(q.length<=6)
+          {
+            document.getElementById("f").innerHTML="<font color=red> Password must have more than 6 in size";
+              return false;
+              
+          }
+          var s=document.forms[0].elements[6].value;
+          if(s==null||s=="")
+          {
+              document.getElementById("g").innerHTML="<font color=red>Fill Address";
+              return false;
+          }
+          var t=document.forms[0].elements[7].value;
+          if(t==null||t=="")
+          {
+              document.getElementById("h").innerHTML="<font color=red>Fill Mobile number";
+              return false;
+          }
+          if(t.length!=10)
+          {
+              document.getElementById("h").innerHTML="<font color=red>Length must be 10";
+              return false;
+          }
+          if(isNaN(t))
+          {
+              document.getElementById("h").innerHTML="<font color=red>Only numeric value allowed";
+              return false;
+          }
+          var u=document.forms[0].elements[8].value;
+          if(u==null||u=="")
+          {
+              document.getElementById("i").innerHTML="<font color=red>Fill Adhaar Card";
+              return false;
+          }
+          var v=document.forms[0].txtmop.value;
+          if(v==null||v=="")
+          {
+              document.getElementById("ee").innerHTML="<font color=red>Fill Mode of Payment";
+              return false;
+          }
+          var w=document.forms[0].txttid.value;
+          
+          if(w==null||w=="")
+          {
+              document.getElementById("ff").innerHTML="<font color=red>Fill Transaction ID";
+              return false;
+          }
+          return true;
+      }
+  </script>
+</head>
+<body style="background-color: black;">
+
+<div class="container">
+  <h2 class="text-primary"><p align="center">Customer Registration Form</p></h2><br>
+  <marquee behavior="alternate"><font color=red size=5>Phone pe,Gpay and Paytm payment for registration available on 8888877867</font></marquee>
+  <br>
+  <form action="customerreg.jsp" onsubmit="return validate()">
+      <div class="form-group" >
+      
+        
+        <label for="email" class="text-warning">Fullname:</label><br>
+        <div class="row">
+          <div class="col-lg-4"><span class="text-warning">
+            Firstname
+          </div>
+          <div class="col-lg-4">
+            <span class="text-warning">Middlename
+          </div>
+          <div class="col-lg-4">
+            <span class="text-warning">Lastname
+          </div>
+        </div>
+  <div class="row">
+      <div class="col-lg-4">
+
+      <input type="text" class="form-control" id="email" placeholder="Enter Firstname" name="txtfname">
+      <p id="a"></p>
+  </div>
+  <div class="col-lg-4">
+      <input type="text" class="form-control" id="email" placeholder="Enter Middlename" name="txtmname">
+      <p id="b"></p>
+  </div>
+  <div class="col-lg-4">
+      <input type="text" class="form-control" id="email" placeholder="Enter Lastname" name="txtlname">
+      <p id="c"></p>
+  </div>
+    </div>
+</div>
+<div class="row">
+          <div class="col-lg-4">
+            <span class="text-warning">Username
+          </div>
+          <div class="col-lg-4">
+            <span class="text-warning">Password
+          </div>
+          <div class="col-lg-4">
+            <span class="text-warning">Confirm Password
+          </div>
+        </div>
+<div class="row">
+
+      
+      
+        <div class="col-lg-4">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter username" name="txtusername">
+      <p id="d"></p>
+
+  </div>
+    
+
+    
+      
+        <div class="col-lg-4">
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="txtpassword">
+      <p id="e"></p>
+  
+
+    </div>
+
+    
+  
+        <div class="col-lg-4">
+      <input type="password" class="form-control" id="pwd" placeholder="Enter confirm password" name="txtconfirmpassword">
+      <p id="f"></p>
+  
+
+    </div>
+  </div>
+    
+          <label for="email"><span class="text-warning">Address:</label><br>
+      <div class="row">
+        <div class="col-lg-4">
+      <textarea class="form-control" id="pwd" placeholder="Enter address" name="txtaddress"></textarea>
+      <p id="g"></p>
+  </div>
+  </div>
+   <div class="row">
+          <div class="col-lg-4">
+            <span class="text-warning">Mobile number
+          </div>
+          <div class="col-lg-4">
+            <span class="text-warning">Adhaar Number
+          </div>
+          <div class="col-lg-4">
+            <span class="text-warning">Email
+          </div>
+        </div>
+      <div class="row">
+        <div class="col-lg-4">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter mobilenumber" name="txtmobilenumber">
+      <p id="h"></p>
+  </div>
+  
+  
+  
+  
+        <div class="col-lg-4">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter adhaar number" name="txtadhaar">
+      <p id="i"></p>
+  </div>
+  
+  
+      
+  
+        <div class="col-lg-4">
+      <input type="email" class="form-control" id="pwd" placeholder="Enter Email Id" name="txtemail" required>
+      <p id="m"></p>
+  </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <span class="text-warning">Registration Charges
+      </div>
+      <div class="col-lg-4">
+        <span class="text-warning">Mode of Payment
+      </div>
+      <div class="col-lg-4">
+        <span class="text-warning">Transaction ID
+      </div>
+      
+    </div>
+    <div class="row">
+
+      
+      
+        <div class="col-lg-4"><span class="text-danger">
+      <input type="text" class="form-control" id="pwd" value="500" name="txtreg"  readonly>
+      <p id="dd"></p>
+
+      </div>
+    
+
+    
+      
+        <div class="col-lg-4">
+ 
+    
+    <select name="txtmop" class="form-control">
+      <option>Phone Pe</option>
+      <option>Gpay</option>
+      <option >Paytm</option>
+    </select>
+ 
+      <p id="ee"></p>
+  
+
+    </div>
+
+    
+  
+        <div class="col-lg-4">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter Transaction ID" name="txttid">
+      <p id="ff"></p>
+  
+
+    </div>
+  </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
